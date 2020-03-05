@@ -1,0 +1,57 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29521.150
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ParseadorXML.Core", "ParseadorXML.Core\ParseadorXML.Core.csproj", "{5F839477-DEB9-4562-8E18-2717BB9E3941}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ParseadorXML.Infrastructure", "ParseadorXML.Infrastructura\ParseadorXML.Infrastructure.csproj", "{33DD61F8-281C-4011-BDD3-C47E34079BC3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ParseadorXML.Application", "ParseadorXML.Application\ParseadorXML.Application.csproj", "{FEB188C9-D438-41BA-B1EC-C434A925202F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Application", "Application", "{161B81BA-25B0-490B-94BB-1258E0943CE6}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Domain", "Domain", "{84D5D87E-850C-4E04-A54B-18641173FC7A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{57319F06-59C5-453A-A2E0-5EAA97BCC6C2}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UI", "UI", "{1552EDE1-2D14-4AB2-A6FC-7CB483E0041D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ParseadorXML.UI", "ParseadorXML.UI\ParseadorXML.UI.csproj", "{4110791F-C706-45B0-882F-0789DC6AB0A7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5F839477-DEB9-4562-8E18-2717BB9E3941}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5F839477-DEB9-4562-8E18-2717BB9E3941}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5F839477-DEB9-4562-8E18-2717BB9E3941}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5F839477-DEB9-4562-8E18-2717BB9E3941}.Release|Any CPU.Build.0 = Release|Any CPU
+		{33DD61F8-281C-4011-BDD3-C47E34079BC3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{33DD61F8-281C-4011-BDD3-C47E34079BC3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{33DD61F8-281C-4011-BDD3-C47E34079BC3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{33DD61F8-281C-4011-BDD3-C47E34079BC3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FEB188C9-D438-41BA-B1EC-C434A925202F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FEB188C9-D438-41BA-B1EC-C434A925202F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FEB188C9-D438-41BA-B1EC-C434A925202F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FEB188C9-D438-41BA-B1EC-C434A925202F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4110791F-C706-45B0-882F-0789DC6AB0A7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4110791F-C706-45B0-882F-0789DC6AB0A7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4110791F-C706-45B0-882F-0789DC6AB0A7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4110791F-C706-45B0-882F-0789DC6AB0A7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{5F839477-DEB9-4562-8E18-2717BB9E3941} = {84D5D87E-850C-4E04-A54B-18641173FC7A}
+		{33DD61F8-281C-4011-BDD3-C47E34079BC3} = {57319F06-59C5-453A-A2E0-5EAA97BCC6C2}
+		{FEB188C9-D438-41BA-B1EC-C434A925202F} = {161B81BA-25B0-490B-94BB-1258E0943CE6}
+		{4110791F-C706-45B0-882F-0789DC6AB0A7} = {1552EDE1-2D14-4AB2-A6FC-7CB483E0041D}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8F3D0E6B-1675-4BB2-9FD2-3786AC9DF6B8}
+	EndGlobalSection
+EndGlobal
