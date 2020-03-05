@@ -8,7 +8,12 @@ Parseador para xml versión 3.0, 3.2 y 3.3
 * Microsoft .NET Framework 4.5
 
 ## Comenzando 🚀
+El proyecto utiliza la arquictectura DDD.
 
+* Application
+* Core
+* Infrastructure
+* Presentacion
 
 ## Autor ✒️
 
