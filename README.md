@@ -15,7 +15,7 @@ El proyecto utiliza la arquictectura DDD.
 * Infrastructure
 * Presentacion
 
-![projects_dependencies](docs/domain_model_diagram.png)
+![projects_dependencies](docs/1_qpHCIA7RDfW89KtSUXGJog.png)
 
 
 
