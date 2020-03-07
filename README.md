@@ -1,4 +1,4 @@
-# ParseadorXMl
+# ParseadorXML
 Parseador para xml versión 3.0, 3.2 y 3.3
 
 
