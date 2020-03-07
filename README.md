@@ -15,6 +15,10 @@ El proyecto utiliza la arquictectura DDD.
 * Infrastructure
 * Presentacion
 
+![projects_dependencies](docs/domain_model_diagram.png)
+
+
+
 ## Autor ✒️
 
 ISC.Magdiel Efrain Palacios Rivera.
