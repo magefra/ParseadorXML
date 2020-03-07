@@ -6,8 +6,6 @@
 
   <ItemGroup>
     <Folder Include="src\Entities\CFDI\Complemento\" />
-    <Folder Include="src\Interfaces\Services\" />
-    <Folder Include="src\Interfaces\Repositories\" />
   </ItemGroup>
 
 </Project>
