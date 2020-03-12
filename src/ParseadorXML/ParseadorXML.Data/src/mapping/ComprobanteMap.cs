@@ -11,7 +11,15 @@ namespace ParseadorXML.Infra.Data.EFRepositories.src.mapping
     {
         public void Configure(EntityTypeBuilder<Comprobante> builder)
         {
-            throw new NotImplementedException();
+            builder.ToTable("Comprobantes");
+
+            builder.HasKey(c => c.Id);
+
+            builder.Property(c => c.UUID)
+            .IsRequired()
+            .HasColumnName("UUID");
+
+
         }
     }
 }

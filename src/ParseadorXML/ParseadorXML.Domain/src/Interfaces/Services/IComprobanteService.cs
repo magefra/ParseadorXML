@@ -4,7 +4,7 @@ using System.Text;
 
 namespace ParseadorXML.Domain.src.Interfaces.Services
 {
-    public interface IService
+    public interface IComprobanteService
     {
     }
 }

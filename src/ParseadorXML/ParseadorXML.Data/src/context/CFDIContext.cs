@@ -17,11 +17,15 @@ namespace ParseadorXML.Infra.Data.EFRepositories.src.context
                 optionsBuilder.UseMySql("Server=[SERVIDOR];Port=[PORTA];Database=modelo;Uid=[USUARIO];Pwd=[SENHA]");
         }
 
+
+
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
 
             object p = modelBuilder.Entity<Comprobante>(new ComprobanteMap().Configure);
         }
+
+
     }
 }
