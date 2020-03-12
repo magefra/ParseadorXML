@@ -11,6 +11,7 @@ namespace ParseadorXML.Infra.Data.EFRepositories.src.context
     {
         public DbSet<Comprobante> Comprobante { get; set; }
 
+
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             if (!optionsBuilder.IsConfigured)

@@ -14,13 +14,13 @@ namespace ParseadorXML.Domain.src.Entities.CFDI.Comprobante
 
 
         /// <summary>
-        /// Atributo Requerido.
+        /// 
         /// </summary>
         public string Version { get; set; }
 
 
         /// <summary>
-        /// Atributo Requerido.
+        /// 
         /// </summary>
         public DateTime Fecha { get; set; }
 

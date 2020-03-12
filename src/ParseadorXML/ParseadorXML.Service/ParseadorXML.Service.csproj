@@ -5,6 +5,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Folder Include="src\Profile\" />
     <Folder Include="src\Validators\" />
     <Folder Include="src\Services\" />
   </ItemGroup>
