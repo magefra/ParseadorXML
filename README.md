@@ -1,4 +1,4 @@
-# ParseadorXMl
+# ParseadorXML
 Parseador para xml versión 3.0, 3.2 y 3.3
 
 
@@ -14,6 +14,10 @@ El proyecto utiliza la arquictectura DDD.
 * Core
 * Infrastructure
 * Presentacion
+
+![projects_dependencies](docs/1_qpHCIA7RDfW89KtSUXGJog.png)
+
+
 
 ## Autor ✒️
 
