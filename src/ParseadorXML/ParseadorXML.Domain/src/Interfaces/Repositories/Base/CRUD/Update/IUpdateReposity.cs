@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace ParseadorXML.Domain.src.Interfaces.Repositories.Base
+namespace ParseadorXML.Domain.src.Interfaces.Repositories.Base.CRUD
 {
     public interface IUpdateReposity<T>
     {

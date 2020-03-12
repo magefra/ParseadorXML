@@ -1,11 +1,10 @@
 ﻿using ParseadorXML.Domain.src.Entities.CFDI.Comprobante;
-using System;
-using System.Collections.Generic;
-using System.Text;
+using ParseadorXML.Domain.src.Interfaces.Repositories.Base.CRUD;
 
 namespace ParseadorXML.Domain.src.Interfaces.Repositories.Base
 {
-    public interface IConceptoRepository : IRepositoryAsync<Concepto>
+    public interface IConceptoRepository : IInsertRepository<Concepto>,
+                                           ISelectAllRepositoryAsync<Concepto>
     {
     }
 }
