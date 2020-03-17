@@ -11,7 +11,7 @@ namespace ParseadorXML.Domain.src.Interfaces.Repositories.Base.CRUD
         /// 
         /// </summary>
         /// <param name="obj"></param>
-        Task<T> Insert(T obj);
+        Task Insert(T obj);
 
 
     }

@@ -20,7 +20,7 @@ namespace ParseadorXML.Infra.Data.EFRepositories.src.Repositories
             throw new NotImplementedException();
         }
 
-        Task<Concepto> IInsertRepositoryAsync<Concepto>.Insert(Concepto obj)
+        Task IInsertRepositoryAsync<Concepto>.Insert(Concepto obj)
         {
             throw new NotImplementedException();
         }

@@ -4,7 +4,7 @@ using System.Text;
 
 namespace ParseadorXML.Domain.src.Entities.CFDI.Comprobante
 {
-    public class Emisor
+    public class Emisor : Entity
     {
 
         /// <summary>
@@ -18,6 +18,9 @@ namespace ParseadorXML.Domain.src.Entities.CFDI.Comprobante
         /// </summary>
         public string RazonSocial { get; set; }
 
+
+
+        public Comprobante Comprobante { get; set; }
 
         /// <summary>
         /// 

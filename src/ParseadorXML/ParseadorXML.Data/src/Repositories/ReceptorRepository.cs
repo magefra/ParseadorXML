@@ -1,6 +1,8 @@
-﻿using ParseadorXML.Domain.src.Entities.CFDI.Comprobante;
+﻿using Microsoft.EntityFrameworkCore;
+using ParseadorXML.Domain.src.Entities.CFDI.Comprobante;
 using ParseadorXML.Domain.src.Interfaces.Repositories;
 using ParseadorXML.Domain.src.Interfaces.Repositories.Base.CRUD;
+using ParseadorXML.Infra.Data.EFRepositories.src.context;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -10,19 +12,45 @@ namespace ParseadorXML.Infra.Data.EFRepositories.src.Repositories
 {
     public class ReceptorRepository : IReceptorRespository
     {
-        public void Insert(Receptor obj)
+
+        /// <summary>
+        /// 
+        /// </summary>
+        private readonly CFDIContext _CFDIContext;
+
+
+
+        public ReceptorRepository(CFDIContext CFDIContext)
         {
-            throw new NotImplementedException();
+            _CFDIContext = CFDIContext;
         }
 
-        public Task<IEnumerable<Receptor>> SelectAll()
+
+        public async Task Insert(Receptor obj)
         {
-            throw new NotImplementedException();
+            _CFDIContext.Receptor.Add(obj);
+            await SaveChanges();
         }
 
-        Task<Receptor> IInsertRepositoryAsync<Receptor>.Insert(Receptor obj)
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
+        public async Task<IEnumerable<Receptor>> SelectAll()
         {
-            throw new NotImplementedException();
+            return await _CFDIContext.Receptor.ToListAsync();
         }
+
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
+        public async Task<int> SaveChanges()
+        {
+            return await _CFDIContext.SaveChangesAsync();
+        }
+
+
     }
 }
