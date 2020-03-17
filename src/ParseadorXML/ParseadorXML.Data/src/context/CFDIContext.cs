@@ -19,7 +19,6 @@ namespace ParseadorXML.Infra.Data.EFRepositories.src.context
         }
 
 
-
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);

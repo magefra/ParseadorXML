@@ -6,8 +6,8 @@ using System.Text;
 
 namespace ParseadorXML.Domain.src.Interfaces.Repositories
 {
-    public interface  IReceptorRespository : IInsertRepository<Receptor>,
-                                             ISelectAllRepositoryAsync<Receptor>
+    public interface IEmisorRepository : IInsertRepositoryAsync<Emisor>,
+                                         ISelectAllRepositoryAsync<Emisor>
     {
     }
 }

@@ -10,12 +10,18 @@ namespace ParseadorXML.Domain.src.Entities.CFDI.Comprobante
         /// <summary>
         /// 
         /// </summary>
-        public string RFCEmisor { get; set; }
+        public string RFC { get; set; }
 
 
         /// <summary>
         /// 
         /// </summary>
-        public string RazonSocialEmisor { get; set; }
+        public string RazonSocial { get; set; }
+
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public string UUID { get; set; }
     }
 }

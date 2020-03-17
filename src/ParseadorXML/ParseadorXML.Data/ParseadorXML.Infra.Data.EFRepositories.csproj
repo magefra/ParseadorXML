@@ -21,4 +21,8 @@
     <ProjectReference Include="..\ParseadorXML.Domain\ParseadorXML.Domain.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="src\Migrations\" />
+  </ItemGroup>
+
 </Project>

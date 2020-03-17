@@ -5,7 +5,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="src\Entities\CFDI\Complemento\" />
+    <Folder Include="src\CFDI\Impuestos\" />
+    <Folder Include="src\CFDI\CFDIRelacionados\" />
   </ItemGroup>
 
 </Project>

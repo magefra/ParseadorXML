@@ -13,11 +13,16 @@ namespace ParseadorXML.Infra.Data.EFRepositories.src.mapping
         {
             builder.ToTable("Comprobantes");
 
-            builder.HasKey(c => c.Id);
+            builder.HasKey(c => c.UUID);
 
-            builder.Property(c => c.UUID)
-            .IsRequired()
-            .HasColumnName("UUID");
+            builder.Property(c => c.Version)
+               .IsRequired()
+               .HasColumnType("varchar(100)")
+               .HasColumnName("Version")
+               .HasMaxLength(2);
+
+            builder.Property(c => c.Fecha)
+               .HasColumnType("datetime");
 
 
         }

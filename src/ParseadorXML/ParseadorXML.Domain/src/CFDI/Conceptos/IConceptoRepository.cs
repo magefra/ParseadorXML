@@ -3,7 +3,7 @@ using ParseadorXML.Domain.src.Interfaces.Repositories.Base.CRUD;
 
 namespace ParseadorXML.Domain.src.Interfaces.Repositories.Base
 {
-    public interface IConceptoRepository : IInsertRepository<Concepto>,
+    public interface IConceptoRepository : IInsertRepositoryAsync<Concepto>,
                                            ISelectAllRepositoryAsync<Concepto>
     {
     }
