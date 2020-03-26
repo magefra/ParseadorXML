@@ -4,8 +4,10 @@ using System.Text;
 
 namespace ParseadorXML.Domain.src.Entities.CFDI.Comprobante
 {
-    public class Comprobante 
+    public class Comprobante
     {
+
+      
         /// <summary>
         /// 
         /// </summary>
@@ -46,6 +48,8 @@ namespace ParseadorXML.Domain.src.Entities.CFDI.Comprobante
         /// 
         /// </summary>
         public List<Concepto> Conceptos { get; set; }
+
+
 
 
         private DateTime _createAt;

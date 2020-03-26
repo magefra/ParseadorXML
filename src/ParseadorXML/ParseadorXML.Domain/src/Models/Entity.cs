@@ -26,7 +26,7 @@ namespace ParseadorXML.Domain.src.Entities
 
         public Entity(Guid Id)
         {
-            Id = Id;
+            this.Id = Id;
         }
 
         public override bool Equals(object obj)

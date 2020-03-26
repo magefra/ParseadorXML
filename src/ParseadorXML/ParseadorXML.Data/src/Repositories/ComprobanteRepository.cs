@@ -9,12 +9,12 @@ namespace ParseadorXML.Infra.Data.EFRepositories.src.Repositories
 {
     public class ComprobanteRepository : IComprobanteRepository
     {
-        public void Insert(Comprobante obj)
+        public async Task  Insert(Comprobante obj)
         {
             throw new NotImplementedException();
         }
 
-        public void Remove(int id)
+        public async Task Remove(int id)
         {
             throw new NotImplementedException();
         }
@@ -29,7 +29,7 @@ namespace ParseadorXML.Infra.Data.EFRepositories.src.Repositories
             throw new NotImplementedException();
         }
 
-        public void Update(Comprobante obj)
+        public async Task Update(Comprobante obj)
         {
             throw new NotImplementedException();
         }

@@ -15,27 +15,23 @@ namespace ParseadorXML.Infra.Data.EFRepositories.src.context
 
         public DbSet<Emisor> Emisor { get; set; }
 
-        public DbSet<Receptor>  Receptor { get; set; }
+        public DbSet<Receptor> Receptor { get; set; }
 
 
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        public CFDIContext(DbContextOptions<CFDIContext> options)
+            : base(options)
         {
-
-
-
-            if (!optionsBuilder.IsConfigured)
-                optionsBuilder.UseMySql("Server=[SERVIDOR];Port=[PORTA];Database=modelo;Uid=[USUARIO];Pwd=[SENHA]");
+            Database.EnsureCreated();
         }
 
-        
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
 
-            object p = modelBuilder.Entity<Comprobante>(new ComprobanteMap().Configure);
-            object c = modelBuilder.Entity<Emisor>(new EmisorMap().Configure);
-            object o = modelBuilder.Entity<Receptor>(new ReceptorMap().Configure);
+            modelBuilder.Entity<Comprobante>(new ComprobanteMap().Configure);
+            modelBuilder.Entity<Emisor>(new EmisorMap().Configure);
+            modelBuilder.Entity<Receptor>(new ReceptorMap().Configure);
         }
 
 

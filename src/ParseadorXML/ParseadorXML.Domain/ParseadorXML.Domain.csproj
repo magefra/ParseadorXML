@@ -5,8 +5,9 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="src\CFDI\Impuestos\" />
-    <Folder Include="src\CFDI\CFDIRelacionados\" />
+    <Folder Include="src\Entities\CFDI\Impuestos\" />
+    <Folder Include="src\Entities\CFDI\CFDIRelacionados\" />
+    <Folder Include="src\Enums\" />
   </ItemGroup>
 
 </Project>

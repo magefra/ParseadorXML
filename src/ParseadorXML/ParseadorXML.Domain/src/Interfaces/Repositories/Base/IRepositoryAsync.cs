@@ -11,19 +11,19 @@ namespace ParseadorXML.Domain.src.Interfaces.Repositories
         /// 
         /// </summary>
         /// <param name="obj"></param>
-        void Insert(T obj);
+        Task Insert(T obj);
 
         /// <summary>
         /// 
         /// </summary>
         /// <param name="obj"></param>
-        void Update(T obj);
+        Task Update(T obj);
 
         /// <summary>
         /// 
         /// </summary>
         /// <param name="id"></param>
-        void Remove(int id);
+        Task Remove(int id);
 
 
         /// <summary>
