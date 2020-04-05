@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace ParseadorXML.Service.src.DTO
+namespace ParseadorXML.Service.src.Validators
 {
-    public class ComprobanteDTO
+    public class EmisorValidator
     {
     }
 }

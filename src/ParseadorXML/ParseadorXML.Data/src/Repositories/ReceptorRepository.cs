@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace ParseadorXML.Infra.Data.EFRepositories.src.Repositories
 {
-    public class ReceptorRepository : IReceptorRespository
+    public class ReceptorRepository : IReceptorRepository
     {
 
         /// <summary>

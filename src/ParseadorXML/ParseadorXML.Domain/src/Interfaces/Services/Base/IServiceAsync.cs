@@ -5,26 +5,25 @@ using System.Threading.Tasks;
 
 namespace ParseadorXML.Domain.src.Interfaces.Services
 {
-    public interface IService<T>
+    public interface IServiceAsync<T>
     {
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="obj"></param>
+        Task Insert(T obj);
 
         /// <summary>
         /// 
         /// </summary>
         /// <param name="obj"></param>
-        void Insert(T obj);
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="obj"></param>
-        void Update(T obj);
+        Task Update(T obj);
 
         /// <summary>
         /// 
         /// </summary>
         /// <param name="id"></param>
-        void Remove(int id);
+        Task Remove(int id);
 
 
         /// <summary>

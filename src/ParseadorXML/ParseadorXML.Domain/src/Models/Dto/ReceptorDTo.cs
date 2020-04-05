@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace ParseadorXML.Service.src.DTO
+namespace ParseadorXML.Domain.src.Models.DTO
 {
-    public class EmisorDTO
+    public class ReceptorDTo
     {
     }
 }

@@ -34,6 +34,5 @@ namespace ParseadorXML.Infra.Data.EFRepositories.src.context
             modelBuilder.Entity<Receptor>(new ReceptorMap().Configure);
         }
 
-
     }
 }

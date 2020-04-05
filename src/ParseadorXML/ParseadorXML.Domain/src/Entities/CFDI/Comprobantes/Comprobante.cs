@@ -47,7 +47,7 @@ namespace ParseadorXML.Domain.src.Entities.CFDI.Comprobante
         /// <summary>
         /// 
         /// </summary>
-        public List<Concepto> Conceptos { get; set; }
+        public ICollection<Concepto> Conceptos { get; set; }
 
 
 

@@ -22,6 +22,7 @@ namespace ParseadorXML.Domain.src.Entities.CFDI.Comprobante
 
         public Comprobante Comprobante { get; set; }
 
+
         /// <summary>
         /// 
         /// </summary>
