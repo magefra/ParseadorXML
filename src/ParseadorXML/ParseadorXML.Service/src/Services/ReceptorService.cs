@@ -1,4 +1,6 @@
-﻿using ParseadorXML.Domain.src.Interfaces.Services;
+﻿using AutoMapper;
+using ParseadorXML.Domain.src.Interfaces.Repositories;
+using ParseadorXML.Domain.src.Interfaces.Services;
 using ParseadorXML.Domain.src.Models.DTO;
 using System;
 using System.Collections.Generic;
@@ -9,10 +11,21 @@ namespace ParseadorXML.Service.src.Services
 {
     public class ReceptorService : IReceptorService
     {
+        /// <summary>
+        /// 
+        /// </summary>
+        private readonly IReceptorRepository _receptorRepository;
 
-        public ReceptorService()
+        /// <summary>
+        /// 
+        /// </summary>
+        private readonly IMapper _mapper;
+
+
+        public ReceptorService(IReceptorRepository receptorRepository, IMapper mapper)
         {
-
+            _receptorRepository = receptorRepository;
+            _mapper = mapper;
         }
 
 

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ParseadorXML.Domain.src.Models.Dto;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -31,5 +32,23 @@ namespace ParseadorXML.Domain.src.Models.DTO
         /// 
         /// </summary>
         public String Tipo { get; set; }
+
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public EmisorDTO Emisor { get; set; }
+
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public ReceptorDTo Receptor { get; set; }
+
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public ICollection<ConceptoDTO> Conceptos { get; set; }
     }
 }

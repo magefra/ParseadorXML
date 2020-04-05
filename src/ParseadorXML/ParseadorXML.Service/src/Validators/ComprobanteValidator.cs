@@ -1,6 +1,6 @@
 ﻿using FluentValidation;
 using ParseadorXML.Domain.src.Entities.CFDI.Comprobante;
-using ParseadorXML.Service.src.DTO;
+using ParseadorXML.Domain.src.Models.DTO;
 using System;
 using System.Collections.Generic;
 using System.Data;
