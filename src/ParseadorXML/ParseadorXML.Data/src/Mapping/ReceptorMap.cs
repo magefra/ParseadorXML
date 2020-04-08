@@ -11,7 +11,18 @@ namespace ParseadorXML.Infra.Data.EFRepositories.src.Mapping
     {
         public void Configure(EntityTypeBuilder<Receptor> builder)
         {
-            throw new NotImplementedException();
+            builder.ToTable("Receptores");
+
+            builder.HasKey(p => p.Id);
+
+            builder.Property(c => c.RFC)
+               .IsRequired()
+               .HasColumnType("varchar(13)")
+               .HasColumnName("RFC")
+               .HasMaxLength(13);
+
+            builder.Property(c => c.RazonSocial)
+               .HasColumnType("RazonSocial");
         }
     }
 }

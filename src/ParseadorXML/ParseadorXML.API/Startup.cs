@@ -8,10 +8,12 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using ParseadorXML.Infra.Data.EFRepositories.src.context;
 
 namespace ParseadorXML.API
 {
@@ -28,6 +30,13 @@ namespace ParseadorXML.API
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
+
+            services.AddDbContext<CFDIContext>(options =>
+            {
+                options
+                .UseMySql(@"Data Source=DESKTOP-HF5UD0H\SQLEXPRESS;Initial Catalog=cfdi;User ID=magdiel;Password=89878magdiel;");
+            });
+
 
             services.AddAutoMapper(Assembly.GetExecutingAssembly());
 

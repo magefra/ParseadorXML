@@ -18,14 +18,18 @@ namespace ParseadorXML.Domain.src.Entities.CFDI.Comprobante
         /// </summary>
         public string RazonSocial { get; set; }
 
-
-
-        public Comprobante Comprobante { get; set; }
+        /// <summary>
+        /// 
+        /// </summary>
+        public string UUID { get; set; }
 
 
         /// <summary>
         /// 
         /// </summary>
-        public string UUID { get; set; }
+        public Comprobante Comprobante { get; set; }
+
+
+        
     }
 }

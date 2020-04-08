@@ -4,7 +4,7 @@ using System.Text;
 
 namespace ParseadorXML.Domain.src.Entities.CFDI.Comprobante
 {
-    public class Receptor
+    public class Receptor : Entity
     {
         /// <summary>
         /// 
@@ -21,5 +21,11 @@ namespace ParseadorXML.Domain.src.Entities.CFDI.Comprobante
         /// 
         /// </summary>
         public string UUID { get; set; }
+
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public Comprobante Comprobante { get; set; }
     }
 }

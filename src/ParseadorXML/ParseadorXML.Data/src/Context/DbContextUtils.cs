@@ -17,7 +17,7 @@ namespace ParseadorXML.Infra.Data.EFRepositories.src.Context
         public static TDb Create<TDb>(string connStr, Func<DbContextOptions<TDb>, TDb> creator) where TDb : DbContext
         {
             var options = new DbContextOptionsBuilder<TDb>()
-                .UseMySql(connStr)
+                .UseMySql(@"Data Source=DESKTOP-HF5UD0H\SQLEXPRESS;Initial Catalog=cfdi;User ID=magdiel;Password=89878magdiel;Asynchronous Processing=True;MultipleActiveResultSets=True")
                 .Options;
 
             var dbContext = creator(options);

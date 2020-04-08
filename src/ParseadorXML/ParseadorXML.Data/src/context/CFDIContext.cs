@@ -21,7 +21,7 @@ namespace ParseadorXML.Infra.Data.EFRepositories.src.context
         public CFDIContext(DbContextOptions<CFDIContext> options)
             : base(options)
         {
-            Database.EnsureCreated();
+           
         }
 
 
