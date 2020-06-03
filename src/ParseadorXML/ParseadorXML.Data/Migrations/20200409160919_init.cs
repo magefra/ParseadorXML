@@ -11,7 +11,7 @@ namespace ParseadorXML.Infra.Data.EFRepositories.Migrations
                 name: "Comprobantes",
                 columns: table => new
                 {
-                    UUID = table.Column<string>(nullable: false),
+                    UUID = table.Column<string>(type: "varchar(100)", nullable: false),
                     Version = table.Column<string>(type: "varchar(100)", maxLength: 2, nullable: false),
                     Fecha = table.Column<DateTime>(type: "datetime", nullable: false),
                     Tipo = table.Column<string>(nullable: true),
@@ -52,8 +52,8 @@ namespace ParseadorXML.Infra.Data.EFRepositories.Migrations
                     CreateAt = table.Column<DateTime>(nullable: false),
                     UpdateAt = table.Column<DateTime>(nullable: true),
                     RFC = table.Column<string>(type: "varchar(13)", maxLength: 13, nullable: false),
-                    RazonSocial = table.Column<string>(type: "RazonSocial", nullable: true),
-                    UUID = table.Column<string>(nullable: true)
+                    RazonSocial = table.Column<string>(type: "varchar(1000)", nullable: true),
+                    UUID = table.Column<string>(type: "varchar(100)", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -63,7 +63,7 @@ namespace ParseadorXML.Infra.Data.EFRepositories.Migrations
                         column: x => x.UUID,
                         principalTable: "Comprobantes",
                         principalColumn: "UUID",
-                        onDelete: ReferentialAction.Restrict);
+                        onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateTable(
@@ -74,8 +74,8 @@ namespace ParseadorXML.Infra.Data.EFRepositories.Migrations
                     CreateAt = table.Column<DateTime>(nullable: false),
                     UpdateAt = table.Column<DateTime>(nullable: true),
                     RFC = table.Column<string>(type: "varchar(13)", maxLength: 13, nullable: false),
-                    RazonSocial = table.Column<string>(type: "RazonSocial", nullable: true),
-                    UUID = table.Column<string>(nullable: true)
+                    RazonSocial = table.Column<string>(type: "varchar(1000)", nullable: true),
+                    UUID = table.Column<string>(type: "varchar(100)", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -85,7 +85,7 @@ namespace ParseadorXML.Infra.Data.EFRepositories.Migrations
                         column: x => x.UUID,
                         principalTable: "Comprobantes",
                         principalColumn: "UUID",
-                        onDelete: ReferentialAction.Restrict);
+                        onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateIndex(

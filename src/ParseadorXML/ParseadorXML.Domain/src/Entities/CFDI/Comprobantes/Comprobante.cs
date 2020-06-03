@@ -6,8 +6,9 @@ namespace ParseadorXML.Domain.src.Entities.CFDI.Comprobante
 {
     public class Comprobante
     {
+        private DateTime _createAt;
 
-      
+
         /// <summary>
         /// 
         /// </summary>
@@ -50,17 +51,15 @@ namespace ParseadorXML.Domain.src.Entities.CFDI.Comprobante
         public ICollection<Concepto> Conceptos { get; set; }
 
 
-
-
-        private DateTime _createAt;
+        
         public DateTime CreateAt
         {
             get { return _createAt; }
-            set
-            {
-                _createAt = value == null ? DateTime.UtcNow : value;
-            }
+            set { _createAt = (value == null ? DateTime.UtcNow : value); }
         }
+
+
+        public DateTime? UpdateAt { get; set; }
 
 
 

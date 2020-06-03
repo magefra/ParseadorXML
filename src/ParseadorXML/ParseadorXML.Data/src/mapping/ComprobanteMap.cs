@@ -9,11 +9,22 @@ namespace ParseadorXML.Infra.Data.EFRepositories.src.mapping
 {
     public class ComprobanteMap : IEntityTypeConfiguration<Comprobante>
     {
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="builder"></param>
         public void Configure(EntityTypeBuilder<Comprobante> builder)
         {
             builder.ToTable("Comprobantes");
 
-            builder.HasKey(c => c.UUID);
+            builder.HasKey(s => s.UUID);
+
+
+            builder.Property(c => c.UUID)
+                   .HasColumnType("varchar(100)");
+
+
 
             builder.Property(c => c.Version)
                .IsRequired()
@@ -33,7 +44,6 @@ namespace ParseadorXML.Infra.Data.EFRepositories.src.mapping
             builder.HasOne(b => b.Receptor)
            .WithOne(i => i.Comprobante)
            .HasForeignKey<Receptor>(b => b.UUID);
-
 
 
             builder.HasMany(b => b.Conceptos)

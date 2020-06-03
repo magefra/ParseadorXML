@@ -20,7 +20,7 @@ namespace ParseadorXML.Infra.Data.EFRepositories.Migrations
             modelBuilder.Entity("ParseadorXML.Domain.src.Entities.CFDI.Comprobante.Comprobante", b =>
                 {
                     b.Property<string>("UUID")
-                        .HasColumnType("varchar(255) CHARACTER SET utf8mb4");
+                        .HasColumnType("varchar(100)");
 
                     b.Property<DateTime>("CreateAt")
                         .HasColumnType("datetime(6)");
@@ -49,7 +49,7 @@ namespace ParseadorXML.Infra.Data.EFRepositories.Migrations
                         .HasColumnType("char(36)");
 
                     b.Property<string>("ComprobanteUUID")
-                        .HasColumnType("varchar(255) CHARACTER SET utf8mb4");
+                        .HasColumnType("varchar(100)");
 
                     b.Property<DateTime>("CreateAt")
                         .HasColumnType("datetime(6)");
@@ -86,10 +86,11 @@ namespace ParseadorXML.Infra.Data.EFRepositories.Migrations
                         .HasMaxLength(13);
 
                     b.Property<string>("RazonSocial")
-                        .HasColumnType("RazonSocial");
+                        .HasColumnType("varchar(1000)");
 
                     b.Property<string>("UUID")
-                        .HasColumnType("varchar(255) CHARACTER SET utf8mb4");
+                        .IsRequired()
+                        .HasColumnType("varchar(100)");
 
                     b.Property<DateTime?>("UpdateAt")
                         .HasColumnType("datetime(6)");
@@ -118,10 +119,11 @@ namespace ParseadorXML.Infra.Data.EFRepositories.Migrations
                         .HasMaxLength(13);
 
                     b.Property<string>("RazonSocial")
-                        .HasColumnType("RazonSocial");
+                        .HasColumnType("varchar(1000)");
 
                     b.Property<string>("UUID")
-                        .HasColumnType("varchar(255) CHARACTER SET utf8mb4");
+                        .IsRequired()
+                        .HasColumnType("varchar(100)");
 
                     b.Property<DateTime?>("UpdateAt")
                         .HasColumnType("datetime(6)");
@@ -145,14 +147,18 @@ namespace ParseadorXML.Infra.Data.EFRepositories.Migrations
                 {
                     b.HasOne("ParseadorXML.Domain.src.Entities.CFDI.Comprobante.Comprobante", "Comprobante")
                         .WithOne("Emisor")
-                        .HasForeignKey("ParseadorXML.Domain.src.Entities.CFDI.Comprobante.Emisor", "UUID");
+                        .HasForeignKey("ParseadorXML.Domain.src.Entities.CFDI.Comprobante.Emisor", "UUID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
                 });
 
             modelBuilder.Entity("ParseadorXML.Domain.src.Entities.CFDI.Comprobante.Receptor", b =>
                 {
                     b.HasOne("ParseadorXML.Domain.src.Entities.CFDI.Comprobante.Comprobante", "Comprobante")
                         .WithOne("Receptor")
-                        .HasForeignKey("ParseadorXML.Domain.src.Entities.CFDI.Comprobante.Receptor", "UUID");
+                        .HasForeignKey("ParseadorXML.Domain.src.Entities.CFDI.Comprobante.Receptor", "UUID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
                 });
 #pragma warning restore 612, 618
         }

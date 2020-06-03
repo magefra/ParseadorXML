@@ -34,7 +34,7 @@ namespace ParseadorXML.API
             services.AddDbContext<CFDIContext>(options =>
             {
                 options
-                .UseMySql(@"Data Source=DESKTOP-HF5UD0H\SQLEXPRESS;Initial Catalog=cfdi;User ID=magdiel;Password=89878magdiel;");
+                .UseMySql(@"Server=localhost;Database=cfdi10;port=;User Id=root;password=89878crumag;Pooling=True;default command timeout=200000;MinimumPoolSize=10;maximumpoolsize=50;");
             });
 
 

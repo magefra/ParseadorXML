@@ -22,7 +22,13 @@ namespace ParseadorXML.Infra.Data.EFRepositories.src.Mapping
                .HasMaxLength(13);
 
             builder.Property(c => c.RazonSocial)
-               .HasColumnType("RazonSocial");
+               .HasColumnType("RazonSocial")
+               .HasColumnType("varchar(1000)");
+
+
+            builder.Property(c => c.UUID)
+                   .IsRequired()
+                   .HasColumnType("varchar(100)");
         }
     }
 }
