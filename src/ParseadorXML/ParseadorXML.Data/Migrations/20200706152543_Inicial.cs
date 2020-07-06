@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace ParseadorXML.Infra.Data.EFRepositories.Migrations
 {
-    public partial class init : Migration
+    public partial class Inicial : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -11,11 +11,12 @@ namespace ParseadorXML.Infra.Data.EFRepositories.Migrations
                 name: "Comprobantes",
                 columns: table => new
                 {
-                    UUID = table.Column<string>(type: "varchar(100)", nullable: false),
+                    UUID = table.Column<string>(type: "varchar(36)", nullable: false),
                     Version = table.Column<string>(type: "varchar(100)", maxLength: 2, nullable: false),
                     Fecha = table.Column<DateTime>(type: "datetime", nullable: false),
-                    Tipo = table.Column<string>(nullable: true),
-                    CreateAt = table.Column<DateTime>(nullable: false)
+                    Tipo = table.Column<string>(type: "varchar(100)", nullable: false),
+                    CreateAt = table.Column<DateTime>(nullable: false),
+                    UpdateAt = table.Column<DateTime>(nullable: true)
                 },
                 constraints: table =>
                 {
@@ -53,7 +54,7 @@ namespace ParseadorXML.Infra.Data.EFRepositories.Migrations
                     UpdateAt = table.Column<DateTime>(nullable: true),
                     RFC = table.Column<string>(type: "varchar(13)", maxLength: 13, nullable: false),
                     RazonSocial = table.Column<string>(type: "varchar(1000)", nullable: true),
-                    UUID = table.Column<string>(type: "varchar(100)", nullable: false)
+                    UUID = table.Column<string>(type: "varchar(36)", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -75,7 +76,7 @@ namespace ParseadorXML.Infra.Data.EFRepositories.Migrations
                     UpdateAt = table.Column<DateTime>(nullable: true),
                     RFC = table.Column<string>(type: "varchar(13)", maxLength: 13, nullable: false),
                     RazonSocial = table.Column<string>(type: "varchar(1000)", nullable: true),
-                    UUID = table.Column<string>(type: "varchar(100)", nullable: false)
+                    UUID = table.Column<string>(type: "varchar(36)", nullable: false)
                 },
                 constraints: table =>
                 {

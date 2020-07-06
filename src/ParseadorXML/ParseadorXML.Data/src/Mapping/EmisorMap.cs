@@ -29,7 +29,7 @@ namespace ParseadorXML.Infra.Data.EFRepositories.src.Mapping
 
             builder.Property(c => c.UUID)
               .IsRequired()
-              .HasColumnType("varchar(100)");
+              .HasColumnType("varchar(36)");
 
 
 

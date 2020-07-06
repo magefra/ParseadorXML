@@ -1,5 +1,7 @@
-﻿using ParseadorXML.Domain.src.Entities.CFDI.Comprobante;
+﻿using Microsoft.EntityFrameworkCore;
+using ParseadorXML.Domain.src.Entities.CFDI.Comprobante;
 using ParseadorXML.Domain.src.Interfaces.Repositories;
+using ParseadorXML.Infra.Data.EFRepositories.src.context;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -9,6 +11,17 @@ namespace ParseadorXML.Infra.Data.EFRepositories.src.Repositories
 {
     public class ComprobanteRepository : IComprobanteRepository
     {
+        /// <summary>
+        /// 
+        /// </summary>
+        private readonly CFDIContext _cFDIContext;
+
+
+        public ComprobanteRepository(CFDIContext cFDIContext)
+        {
+            _cFDIContext = cFDIContext;
+        }
+
         public async Task  Insert(Comprobante obj)
         {
             throw new NotImplementedException();
@@ -24,10 +37,19 @@ namespace ParseadorXML.Infra.Data.EFRepositories.src.Repositories
             throw new NotImplementedException();
         }
 
-        public Task<IEnumerable<Comprobante>> SelectAll()
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
+        public  async Task<IEnumerable<Comprobante>> SelectAll()
         {
-            throw new NotImplementedException();
+            var result = await _cFDIContext.Comprobante.ToListAsync();
+
+            return result;
         }
+
+
+
 
         public async Task Update(Comprobante obj)
         {

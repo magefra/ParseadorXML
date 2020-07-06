@@ -2,6 +2,7 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using ParseadorXML.Infra.Data.EFRepositories.src.context;
 
@@ -15,21 +16,27 @@ namespace ParseadorXML.Infra.Data.EFRepositories.Migrations
 #pragma warning disable 612, 618
             modelBuilder
                 .HasAnnotation("ProductVersion", "3.1.3")
-                .HasAnnotation("Relational:MaxIdentifierLength", 64);
+                .HasAnnotation("Relational:MaxIdentifierLength", 128)
+                .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
             modelBuilder.Entity("ParseadorXML.Domain.src.Entities.CFDI.Comprobante.Comprobante", b =>
                 {
                     b.Property<string>("UUID")
-                        .HasColumnType("varchar(100)");
+                        .HasColumnType("varchar(36)");
 
                     b.Property<DateTime>("CreateAt")
-                        .HasColumnType("datetime(6)");
+                        .HasColumnType("datetime2");
 
                     b.Property<DateTime>("Fecha")
                         .HasColumnType("datetime");
 
                     b.Property<string>("Tipo")
-                        .HasColumnType("longtext CHARACTER SET utf8mb4");
+                        .IsRequired()
+                        .HasColumnName("Tipo")
+                        .HasColumnType("varchar(100)");
+
+                    b.Property<DateTime?>("UpdateAt")
+                        .HasColumnType("datetime2");
 
                     b.Property<string>("Version")
                         .IsRequired()
@@ -46,22 +53,22 @@ namespace ParseadorXML.Infra.Data.EFRepositories.Migrations
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("char(36)");
+                        .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("ComprobanteUUID")
-                        .HasColumnType("varchar(100)");
+                        .HasColumnType("varchar(36)");
 
                     b.Property<DateTime>("CreateAt")
-                        .HasColumnType("datetime(6)");
+                        .HasColumnType("datetime2");
 
                     b.Property<double>("Total")
-                        .HasColumnType("double");
+                        .HasColumnType("float");
 
                     b.Property<string>("UUID")
-                        .HasColumnType("longtext CHARACTER SET utf8mb4");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTime?>("UpdateAt")
-                        .HasColumnType("datetime(6)");
+                        .HasColumnType("datetime2");
 
                     b.HasKey("Id");
 
@@ -74,10 +81,10 @@ namespace ParseadorXML.Infra.Data.EFRepositories.Migrations
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("char(36)");
+                        .HasColumnType("uniqueidentifier");
 
                     b.Property<DateTime>("CreateAt")
-                        .HasColumnType("datetime(6)");
+                        .HasColumnType("datetime2");
 
                     b.Property<string>("RFC")
                         .IsRequired()
@@ -90,10 +97,10 @@ namespace ParseadorXML.Infra.Data.EFRepositories.Migrations
 
                     b.Property<string>("UUID")
                         .IsRequired()
-                        .HasColumnType("varchar(100)");
+                        .HasColumnType("varchar(36)");
 
                     b.Property<DateTime?>("UpdateAt")
-                        .HasColumnType("datetime(6)");
+                        .HasColumnType("datetime2");
 
                     b.HasKey("Id");
 
@@ -107,10 +114,10 @@ namespace ParseadorXML.Infra.Data.EFRepositories.Migrations
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("char(36)");
+                        .HasColumnType("uniqueidentifier");
 
                     b.Property<DateTime>("CreateAt")
-                        .HasColumnType("datetime(6)");
+                        .HasColumnType("datetime2");
 
                     b.Property<string>("RFC")
                         .IsRequired()
@@ -123,10 +130,10 @@ namespace ParseadorXML.Infra.Data.EFRepositories.Migrations
 
                     b.Property<string>("UUID")
                         .IsRequired()
-                        .HasColumnType("varchar(100)");
+                        .HasColumnType("varchar(36)");
 
                     b.Property<DateTime?>("UpdateAt")
-                        .HasColumnType("datetime(6)");
+                        .HasColumnType("datetime2");
 
                     b.HasKey("Id");
 

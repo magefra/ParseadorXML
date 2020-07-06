@@ -13,7 +13,9 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using ParseadorXML.Domain.src.Interfaces.Repositories;
 using ParseadorXML.Infra.Data.EFRepositories.src.context;
+using ParseadorXML.Infra.Data.EFRepositories.src.Repositories;
 
 namespace ParseadorXML.API
 {
@@ -31,11 +33,14 @@ namespace ParseadorXML.API
         {
             services.AddControllers();
 
+           
+
             services.AddDbContext<CFDIContext>(options =>
-            {
-                options
-                .UseMySql(@"Server=localhost;Database=cfdi10;port=;User Id=root;password=89878crumag;Pooling=True;default command timeout=200000;MinimumPoolSize=10;maximumpoolsize=50;");
-            });
+                   options.UseSqlServer(Configuration.GetConnectionString("ParseadorXML"))
+           );
+
+
+            services.AddTransient<IComprobanteRepository, ComprobanteRepository>();
 
 
             services.AddAutoMapper(Assembly.GetExecutingAssembly());

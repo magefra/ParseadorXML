@@ -22,8 +22,7 @@ namespace ParseadorXML.Infra.Data.EFRepositories.src.mapping
 
 
             builder.Property(c => c.UUID)
-                   .HasColumnType("varchar(100)");
-
+                   .HasColumnType("varchar(36)");
 
 
             builder.Property(c => c.Version)
@@ -31,6 +30,13 @@ namespace ParseadorXML.Infra.Data.EFRepositories.src.mapping
                .HasColumnType("varchar(100)")
                .HasColumnName("Version")
                .HasMaxLength(2);
+
+
+            builder.Property(c => c.Tipo)
+              .IsRequired()
+              .HasColumnType("varchar(100)")
+              .HasColumnName("Tipo");
+
 
             builder.Property(c => c.Fecha)
                .HasColumnType("datetime");
